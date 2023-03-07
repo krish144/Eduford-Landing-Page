@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --color-white:#fff;
+    --color-grey:#777;
+    --color-orange:#f44336;
+    --color-lightPink:#fff3f3;
+    --color-lightGrey:#f0f0f0;
+}
+
+
+*,
+*::after,
+*::before{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+ font-size: 62.5%;
+ overflow-x: hidden;
+}
+
+
+.course,.campus,.facilities,.testimonials,.cta{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/*  ----- Home Page ----- */
+
+
+/*  ----- Header -----  */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../img/eduford_img/banner.png);
+    background-position:center;
+    background-size: cover;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+}
+
+#menu-icon,#close-icon{
+    display: none;
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+.logo{
+    width: 150px;
+}
+
+.nav-list{
+    padding: 8px 12px;
+    display: inline-block;
+    list-style-type: none;
+}
+
+.nav-link{
+    text-decoration: none ;
+    font-size: 1.3rem;
+    color: var(--color-white);
+}
+
+.nav-link::after{
+    content: ' ';
+    width: 0%;
+    height: 3px;
+    background-color: var(--color-orange);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: var(--color-white);
+}
+
+.main-heading{
+    font-size: 5.2rem;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 1.4rem;
+}
+
+.hero-btn{
+    display: inline-block;
+    padding: 13px 34px;
+    border: 1px solid var(--color-white);
+    text-decoration:none;
+    color: var(--color-white);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 1s;
+    position: relative;
+}
+
+
+.hero-btn:hover{
+    border: 1px solid var(--color-orange);
+    background-color:var(--color-orange);
+}
+
+/* ----- Course ----- */
+
+.side-heading{
+    font-size: 3.6rem;
+    font-weight: 600;
+}
+
+.paragraph{
+    color: var(--color-grey);
+    font-size: 1.4rem;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.grid{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background-color: var(--color-lightPink);
+    padding: 20px 12px;
+    border-radius: 12px;
+    margin-bottom:5%; 
+    cursor: pointer;
+}
+
+.course-col h3{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);  
+}
+
+
+/* ----- Campus ----- */
+
+
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.layer:hover{ 
+    background-color: rgba(226,0,0,0.6);
+}
+
+.layer h3{
+    width: 100%;
+    color: var(--color-white);
+    font-size: 26px;
+    font-weight: 500;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* ----- Facilities ----- */
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+.facilities-col img{
+    width:100%;
+    border-radius: 10px;
+}
+
+.facilities-col h3{
+    margin: 16px 0px 15px;
+    font-size: 2rem;
+}
+
+.facilities .paragraph{
+    padding: 0%;
+}
+
+
+/* ----- Testimonials ----- */
+
+
+.testimonials-col{
+    flex-basis: 44%;
+    display: flex;
+    text-align: left;
+    border-radius: 12px;
+    background-color: var(--color-lightPink);
+    padding: 25px;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.testimonials-col img{
+    width: 40px;
+    height: 40px;
+    margin: 0px 30px 0px 5px;
+    border-radius: 50%;
+
+}
+
+.testimonials-col .paragraph{
+    padding: 0 ;
+}
+
+.testimonials-col h3{
+    margin-top: 15px;
+}
+
+.testimonials-col .material-icons{
+    color: var(--color-orange);
+}
+
+
+/* ----- Call To Action -----  */
+
+
+.cta{
+    margin: 100px auto;
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/eduford_img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cta h2{
+    font-size: 4rem;
+    color: var(--color-white);
+    margin-bottom: 40px;
+}
+
+
+/*  ----- Footer -----   */
+
+footer{
+   text-align: center;
+   padding: 30px 0;
+}
+
+.footer h4{
+    font-size: 1.7rem;
+    padding-top: 20px;
+    font-weight: 600;
+}
+
+footer svg{
+    width: 25px;
+}
+
+.icons{
+    margin: 20px 0px 10px;
+}
+
+.icon-links{
+    padding-right: 30px;
+    text-decoration: none;
+}
+
+.footer .material-icons{
+    font-size: 1.4rem;
+    margin: 0px 1px;
+} 
+
+.footer p{
+    margin: 25px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*  ----- About Us Page ----- */
+
+/*  ----- Header ----- */
+
+.sub-header{
+    width: 100%;
+    height:50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/eduford_img/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.sub-header h1{
+    font-size: 3rem;
+    color: var(--color-white);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.about{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding: 100px opx;   
+}
+
+.about-col{
+    flex-basis: 49%;
+    margin-bottom: 5%;
+}
+
+.about-col h2{
+    font-size: 4rem
+}
+
+.about p{
+    padding: 0%;
+}
+
+.about-col img{
+    width: 100%;
+}
+
+.red-btn{
+     color: var(--color-orange);
+     border: 1px solid var(--color-orange);
+     margin-top: 30px;
+     background-color: transparent;
+}
+
+.red-btn:hover{
+    color:var(--color-white)
+}
+
+
+/* ----- Blog Page ----- */
+
+
+.blog{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding: 60px opx;  
+    margin-top: 5%; 
+}
+
+.left-blog{
+    flex-basis: 65%;
+   
+}
+
+.left-blog h2{
+    font-size: 3rem;
+    margin: 30px 0px;
+    color: #222; 
+}
+
+.left-blog img{
+    width: 100%;
+}
+
+.left-blog .paragraph{
+    padding: 0px;
+}
+
+.right-blog{
+   flex-basis: 32%;
+}
+
+.right-blog h3{
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    text-align: center;
+    padding: 6px 30px;
+    margin-bottom: 20px;
+}
+
+.right-blog div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    box-sizing: border-box;
+    color: #555;
+    font-size: 1.4rem;
+}
+
+.comment-box{
+    border: 1px solid #ccc;
+    padding: 20px 30px;
+    margin: 50px 0;
+}
+
+.comment-box h3{
+    font-size: 1.8rem;
+}
+
+.comment-box input,.comment-box textarea{
+    width:100%;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: var(--color-lightGrey);
+    border: none;
+    outline: none;
+}
+
+.comment-box button{
+    margin: 10px 0px;
+}
+
+/* ----- Contact Page ----- */
+
+.contact{
+    width: 80%;
+    margin: auto;  
+    padding: 60px 0px;
+    margin-top: 5%; 
+}
+
+.location iframe{
+    width:100%;
+}
+
+.contact-col{
+    padding: 10px 0px;  
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col .material-icons{
+    font-size: 2.8rem;
+    color: var(--color-orange);
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div h5{
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+    color: #555;
+}
+
+.contact-col div p{
+    padding: 0%;
+    font-size: 1.2rem;
+}
+
+.contact-col input,.contact-col textarea{
+    width:100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+}
